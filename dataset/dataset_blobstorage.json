@@ -5,12 +5,20 @@
 			"referenceName": "Azureblobls",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"sourcefile": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "population_by_age.tsv.zip",
+				"fileName": {
+					"value": "@dataset().sourcefile",
+					"type": "Expression"
+				},
 				"container": "demo1"
 			},
 			"columnDelimiter": "\t",

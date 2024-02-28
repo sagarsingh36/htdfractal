@@ -5,12 +5,20 @@
 			"referenceName": "LS_gen2_storagesagar",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"sinkfile": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "course.tsv",
+				"fileName": {
+					"value": "@dataset().sinkfile",
+					"type": "Expression"
+				},
 				"fileSystem": "container1"
 			},
 			"columnDelimiter": "\t",
