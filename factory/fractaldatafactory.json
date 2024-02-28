@@ -1,0 +1,9 @@
+{
+	"name": "fractaldatafactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "46e9a152-1e3d-49b4-8af2-197d34089155",
+		"tenantId": "de1fd05e-3bdc-40f4-b1ac-95a5627a510c"
+	}
+}
