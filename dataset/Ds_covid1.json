@@ -5,6 +5,11 @@
 			"referenceName": "LS_gen2_storagesagar",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"covid_sink_file": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
