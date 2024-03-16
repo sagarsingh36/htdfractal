@@ -1,0 +1,28 @@
+{
+	"name": "DelimitedText4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_gen2_storagesagar",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "covid.csv",
+				"fileSystem": "container1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "country\tcountry_code\tcontinent\tpopulation\tindicator\tweekly_count\tyear_week\trate_14_day\tcumulative_count\tsource\tnote",
+				"type": "String"
+			}
+		]
+	}
+}
